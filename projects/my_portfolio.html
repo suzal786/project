@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My- Portfolio</title>
+    <title>Suzal - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-      /* Smooth scrolling */
+
+        /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
@@ -38,7 +39,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px; /* Reduced padding for mobile */
+    padding: 15px;
 }
 
 .logo-container {
@@ -69,7 +70,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px; /* Reduced margin for smaller screens */
+    margin-left: 20px;
 }
 
 nav ul li a {
@@ -85,7 +86,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 #hero {
-    height: 80vh; /* Slightly reduced for mobile */
+    height: 80vh;
     background: linear-gradient(135deg, #0f1c33, #2a4066);
     color: #e0e0e0;
     display: flex;
@@ -126,7 +127,7 @@ nav ul li a:hover {
 
 /* General Section Styling */
 section {
-    padding: 60px 15px; /* Reduced padding for mobile */
+    padding: 60px 15px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -159,13 +160,13 @@ section h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px; /* Reduced gap for mobile */
+    gap: 15px;
 }
 
 .skill {
     background: linear-gradient(45deg, #2a4066, #66d9ef);
     color: #fff;
-    padding: 12px 20px; /* Slightly smaller padding */
+    padding: 12px 20px;
     border-radius: 25px;
     font-weight: 500;
 }
@@ -177,13 +178,13 @@ section h2 {
 /* Projects Section */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller min width for mobile */
-    gap: 20px; /* Reduced gap */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .project {
     background-color: #2a4066;
-    padding: 20px; /* Reduced padding */
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
@@ -192,7 +193,7 @@ section h2 {
 .project:hover {
     transform: scale(1.05);
     background-color: #3a5485;
-    box-shadow: 50px 50px 40px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 50px 50px 50px 50px  rgba(0, 0, 0, 0.3);
 }
 
 .animate-slide {
@@ -228,15 +229,14 @@ section h2 {
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 15px; /* Reduced padding */
     background-color: #0f1c33;
     color: #e0e0e0;
     font-size: 0.9rem;
+    text-align: center;
+    padding: 15px;
 }
 
 /* Animations */
-    
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -280,7 +280,7 @@ footer {
     }
 
     #hero {
-        height: 60vh; /* Shorter hero on smaller screens */
+        height: 60vh;
     }
 
     #hero h1 {
@@ -316,7 +316,7 @@ footer {
     }
 
     .projects-container {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .project {
@@ -354,12 +354,13 @@ footer {
         <nav>
             <div class="logo-container">
                 <img src="passportphoto.jpg" alt="Profile Photo" class="logo-photo">
-                <div class="logo">Your Name</div>
+                <div class="logo">Suzal Solanki</div>
             </div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li> 
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -385,7 +386,7 @@ footer {
             <div class="skill animate-bounce">HTML</div>
             <div class="skill animate-bounce">CSS</div>
             <div class="skill animate-bounce">JavaScript (Basic)</div>
-            <div class="skill animate-bounce">Python (Basic)</div>
+            <div class="skill animate-bounce">python (Basic)</div>
         </div>
     </section>
 
@@ -401,20 +402,21 @@ footer {
                 <h3>Project 2: To-Do List App</h3>
                 <p>A functional task manager with basic JavaScript interactivity.</p>
             </div>
+            
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="animate-section">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:[suzalsolanki267@gmail.com]">suzalsolanki267@gmail.com</a></p>
+        <p>Email: <a href="mailto:suzalsolanki267@gmail.com">suzalsolanki267@gmail.com</a></p>
         <p>Phone: 9327761549</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/suzal-solanki-378b862b5?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2RoqE5c6SaatqPlw2OcwAg%3D%3D" target="_blank">My LinkedIn URL</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/suzal-solanki-378b862b5?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8milpqM5Su%2BjU6G48PgzcQ%3D%3D" target="_blank">My LinkedIn URL</a></p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Suzal Solanki,  All rights reserved.</p>
+        <p>© 2025 Suzal Solanki. All rights reserved.</p>
     </footer>
 </body>
 </html>
