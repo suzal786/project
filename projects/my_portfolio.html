@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My- Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #1a2a44;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #0f1c33;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px; /* Reduced padding for mobile */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    border: 2px solid #66d9ef;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #66d9ef;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px; /* Reduced margin for smaller screens */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #66d9ef;
+}
+
+/* Hero Section */
+#hero {
+    height: 80vh; /* Slightly reduced for mobile */
+    background: linear-gradient(135deg, #0f1c33, #2a4066);
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in;
+    color: #66d9ef;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #66d9ef;
+    color: #0f1c33;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4db8d6;
+    transform: scale(1.05);
+}
+
+/* General Section Styling */
+section {
+    padding: 60px 15px; /* Reduced padding for mobile */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Animation for sections */
+.animate-section {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #66d9ef;
+}
+
+/* About Section */
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #b3c0d6;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduced gap for mobile */
+}
+
+.skill {
+    background: linear-gradient(45deg, #2a4066, #66d9ef);
+    color: #fff;
+    padding: 12px 20px; /* Slightly smaller padding */
+    border-radius: 25px;
+    font-weight: 500;
+}
+
+.animate-bounce {
+    animation: bounce 1s infinite alternate;
+}
+
+/* Projects Section */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller min width for mobile */
+    gap: 20px; /* Reduced gap */
+}
+
+.project {
+    background-color: #2a4066;
+    padding: 20px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background-color: #3a5485;
+    box-shadow: 50px 50px 40px 30px rgba(0, 0, 0, 0.3);
+}
+
+.animate-slide {
+    opacity: 0;
+    animation: slideIn 1s ease forwards;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #66d9ef;
+}
+
+.project p {
+    color: #b3c0d6;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #b3c0d6;
+}
+
+#contact a {
+    color: #66d9ef;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #4db8d6;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px; /* Reduced padding */
+    background-color: #0f1c33;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+    
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero {
+        height: 60vh; /* Shorter hero on smaller screens */
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    #about p, #contact p {
+        font-size: 1rem;
+    }
+
+    .skills-container {
+        gap: 10px;
+    }
+
+    .skill {
+        padding: 10px 15px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .project {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-photo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="passportphoto.jpg" alt="Profile Photo" class="logo-photo">
+                <div class="logo">Your Name</div>
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Showcasing my skills, projects, and passion for web development.</p>
+        <a href="#about" class="btn">Learn More</a>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="animate-section">
+        <h2>About Me</h2>
+        <p>I’m Suzal Solanki, a dedicated web developer with a focus on creating clean, responsive, and user-friendly websites. With a strong foundation in HTML and CSS, I’m passionate about bringing ideas to life through code.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="animate-section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill animate-bounce">HTML</div>
+            <div class="skill animate-bounce">CSS</div>
+            <div class="skill animate-bounce">JavaScript (Basic)</div>
+            <div class="skill animate-bounce">Python (Basic)</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="animate-section">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project animate-slide"> 
+                <h3>Project 1: Personal Blog</h3>
+                <p>A sleek blog website built with HTML and CSS, featuring a minimalist design.</p>
+            </div>
+            <div class="project animate-slide">
+                <h3>Project 2: To-Do List App</h3>
+                <p>A functional task manager with basic JavaScript interactivity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="animate-section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:[suzalsolanki267@gmail.com]">suzalsolanki267@gmail.com</a></p>
+        <p>Phone: 9327761549</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/suzal-solanki-378b862b5?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2RoqE5c6SaatqPlw2OcwAg%3D%3D" target="_blank">My LinkedIn URL</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Suzal Solanki,  All rights reserved.</p>
+    </footer>
+</body>
+</html>
